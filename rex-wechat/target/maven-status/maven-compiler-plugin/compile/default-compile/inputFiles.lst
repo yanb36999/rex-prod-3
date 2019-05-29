@@ -1,0 +1,7 @@
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-wechat/src/main/java/com/zmcsoft/rex/wechat/WebChatJSApiController.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-wechat/src/main/java/com/zmcsoft/rex/wechat/AutoRegisterWxMpMessageHandler.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-wechat/src/main/java/com/zmcsoft/rex/wechat/WxSendTemplateMsgServiceImpl.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-wechat/src/main/java/com/zmcsoft/rex/wechat/WeChatProperties.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-wechat/src/main/java/com/zmcsoft/rex/wechat/WxSendTemplateMsgService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-wechat/src/main/java/com/zmcsoft/rex/wechat/WebChatCallBackController.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-wechat/src/main/java/com/zmcsoft/rex/wechat/WebChatAutoConfiguration.java

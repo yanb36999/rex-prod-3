@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmcsoft.rex.tmb.illegal.impl.dao.CarIllegalCaseDao">
+    <resultMap id="CarIllegalCaseResultMap" type="com.zmcsoft.rex.tmb.illegal.entity.CarIllegalCase">
+        <id property="id" column="XH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalNumber" column="WFBH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="organization" column="CJJG" javaType="String" jdbcType="VARCHAR"/>
+        <result property="organizationName" column="CJJGMC" javaType="String" jdbcType="VARCHAR"/>
+        <result property="plateType" column="HPZL" javaType="String" jdbcType="VARCHAR"/>
+        <result property="plateNumber" column="HPHM" javaType="String" jdbcType="VARCHAR"/>
+        <result property="driverNumber" column="JSZH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="fileNumber" column="DABH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="party" column="DSR" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalTime" column="WFSJ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="administrativeDivision" column="XZQH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalAddressNo" column="WFDD" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalAddress" column="WFDZ" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalActivities" column="WFXW" javaType="String" jdbcType="VARCHAR"/>
+        <result property="payMoney" column="FKJE" javaType="BigDecimal" jdbcType="FLOAT"/>
+        <result property="handleSign" column="CLBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="processingTime" column="CLSJ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="paySign" column="JKBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="updateTime" column="GXSJ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="storageTime" column="RKSJ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="carDistinguishCode" column="CLSBDH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="infoSource" column="XXLY" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="isCommit" column="SFTJ" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="score" column="WFJFS" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="trafficMode" column="JTFS" javaType="String" jdbcType="VARCHAR"/>
+        <result property="sendOutOrganization" column="FSJG" javaType="String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--用于动态生成sql所需的配置-->
+    <sql id="config">
+        <bind name="resultMapId" value="'CarIllegalCaseResultMap'"/>
+        <bind name="tableName" value="'sea_web_vio'"/>
+    </sql>
+
+    <!--<insert id="insert" parameterType="com.zmcsoft.rex.api.user.entity.UserCar">-->
+    <!--<include refid="config"/>-->
+    <!--<include refid="BasicMapper.buildInsertSql"/>-->
+    <!--</insert>-->
+
+    <!--<delete id="deleteByPk" parameterType="Long">-->
+    <!--delete from t_user_car where u_id =#{id}-->
+    <!--</delete>-->
+
+    <!--<delete id="delete" parameterType="org.hswebframework.web.commons.entity.Entity">-->
+    <!--<include refid="config"/>-->
+    <!--<include refid="BasicMapper.buildDeleteSql"/>-->
+    <!--</delete>-->
+    <select id="selectByMap" resultMap="CarIllegalCaseResultMap" parameterType="Map">
+        SELECT
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(HPHM,1,'cdjgj910seatrend') as HPHM,
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(CLSBDH,1,'cdjgj910seatrend') as CLSBDH,
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(JSZH,1,'cdjgj910seatrend') as JSZH,
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(DABH,1,'cdjgj910seatrend') as DABH,
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(DSR,1,'cdjgj910seatrend') as DSR,
+
+        sea_web_vio.*
+
+        FROM sea_web_vio
+        <where>
+            <if test="id != null">
+                AND XH = #{id}
+            </if>
+            <if test="plateType != null">
+                AND HPZL = #{plateType}
+            </if>
+            <if test="plateNumber != null">
+                AND HPHM = PG_ENCRYPT_DECRYPT.ENCRYPT_3KEY_MODE(#{plateNumber},1,'cdjgj910seatrend')
+            </if>
+            <if test="handleSign != null">
+                AND CLBJ = #{handleSign}
+            </if>
+        </where>
+    </select>
+
+    <update id="update" parameterType="org.hswebframework.web.commons.entity.Entity">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildUpdateSql"/>
+    </update>
+
+
+    <select id="query" parameterType="org.hswebframework.web.commons.entity.Entity" resultMap="CarIllegalCaseResultMap">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildSelectSql"/>
+    </select>
+
+    <select id="count" parameterType="org.hswebframework.web.commons.entity.Entity" resultType="int">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildTotalSql"/>
+    </select>
+</mapper>

@@ -1,0 +1,11 @@
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/dao/DriverLicenseScoreDao.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/service/LocalCarInfoService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/controller/DriverLicenseController.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/dao/DriverLicenseDao.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/controller/CarInfoController.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/dao/CarInfoDao.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/service/DBFunctionDataCryptService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/controller/IllegalCaseController.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/service/LocalDriverLicenseService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/dao/CarIllegalCaseDao.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-tmb/rex-tmb-local/src/main/java/com/zmcsoft/rex/tmb/illegal/impl/service/LocalIllegalCaseService.java

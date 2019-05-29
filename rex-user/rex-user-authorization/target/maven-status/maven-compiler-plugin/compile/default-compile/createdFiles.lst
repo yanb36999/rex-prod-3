@@ -1,0 +1,11 @@
+com/zmcsoft/rex/api/user/authorization/RexUserTokenParser$2.class
+com/zmcsoft/rex/api/user/authorization/DESRexUserTokenParser.class
+com/zmcsoft/rex/api/user/authorization/builder/PermissionBuilder.class
+com/zmcsoft/rex/api/user/authorization/RexUserAuthenticationManager.class
+com/zmcsoft/rex/api/user/authorization/RexUserAuthenticationAutoConfiguration.class
+com/zmcsoft/rex/api/user/authorization/RexUserTokenParser$1.class
+com/zmcsoft/rex/api/user/authorization/CustomRexUserTokenParser.class
+com/zmcsoft/rex/api/user/authorization/RexUserAuthenticationInitializeService.class
+com/zmcsoft/rex/api/user/authorization/RexUserTokenParser.class
+com/zmcsoft/rex/api/user/authorization/utils/DESUtils.class
+com/zmcsoft/rex/api/user/authorization/builder/RexUserAuthenticationBuilder.class

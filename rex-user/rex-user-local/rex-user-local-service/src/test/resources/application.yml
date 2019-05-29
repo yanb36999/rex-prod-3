@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,application/json,text/plain,text/css,text/javascript,application/javascript
+spring:
+    aop:
+        auto: true
+        proxy-target-class: true
+    profiles:
+      active: dev
+    datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name : com.mysql.jdbc.Driver
+      url: jdbc:mysql://rm-uf68q023hy2y38q8do.mysql.rds.aliyuncs.com/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: superzoc
+      password: Zc09110817
+hsweb:
+    app:
+      name: 蓉E行交通众治平台
+      version: 1.0.0
+mybatis:
+#  mapper-location-excludes: classpath*:**/UserMapper.xml  # 不加载的配置
+  mapper-locations: classpath*:com/zmcsoft/**/*Mapper.xml

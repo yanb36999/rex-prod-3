@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+    <title>支付测试</title>
+    <script src="../../plugins/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+订单号:<input id="orderId" style="width: 200px"/>
+金额:<input id="amount" style="width: 200px" value="0.01" /><br/>
+回调地址:<input id="callback" style="width: 200px" value="http://localhost:8080/illegal/pay/callback" />
+支付成功跳转页面:<input id="redirectUrl" style="width: 200px" value="http://localhost:8080/illegal/pay/callback" />
+<br>
+
+<button onclick="pay('icbc')">工行支付</button>
+
+
+<button onclick="pay('unionpay')">银联支付</button>
+<div id="pay-form" style="display: none"></div>
+</body>
+</html>
+<script type="text/javascript">
+    $("#redirectUrl").val(window.location.href);
+    $("#callback").val("http://"+window.location.host+"/illegal/pay/callback");
+
+    function pay(channel) {
+        var orderId = $("#orderId").val();
+        var amount = $("#amount").val();
+        var callback = $("#callback").val();
+        var redirectUrl = $("#redirectUrl").val();
+
+        $.ajax({
+            url:"/pay/"+channel,
+            type: "POST",
+            data: {orderId:orderId,amount:amount,callback:callback,redirectUrl:redirectUrl},
+            cache: false,
+            success: function (e) {
+                if(e.result){
+                    var html = e.result.htmlForm;
+                    $("#pay-form").append(html);
+
+                }
+            },
+            dataType:"json"
+
+        })
+    }
+</script>

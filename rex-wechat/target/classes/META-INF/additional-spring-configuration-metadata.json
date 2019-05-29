@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "wechat.app-id",
+      "type": "java.lang.String",
+      "description": "Description for wechat.app-id."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+    <script data-main="upload.js" src="../boot.js" type="text/javascript"></script>
+    <style>
+        .btns {
+            overflow: hidden;
+            float: left;
+        }
+        .btns .btn {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            background: #00b7ee;
+            padding: 10px 15px;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+            overflow: hidden;
+            border:none;
+        }
+        .uploader-list {
+            height:50px;
+            width:400px;
+            float: left;
+            font-size:14px;
+            line-height:50px;
+            margin-left:20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="uploader" class="wu-example">
+    <div class="btns">
+        <div id="picker" style="margin: auto">添加视频</div>
+    </div>
+    <!--用来存放文件信息-->
+    <div id="thelist" class="uploader-list">
+        <div class="item">
+            <span style="margin-right: 10px;" class="file-name"></span>
+            <span class="state"></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+com/zmcsoft/rex/api/user/entity/UserDriverLicense.class
+com/zmcsoft/rex/api/user/entity/User.class
+com/zmcsoft/rex/api/user/service/UserPointService.class
+com/zmcsoft/rex/api/user/service/UserService.class
+com/zmcsoft/rex/api/user/service/UserCarService.class
+com/zmcsoft/rex/api/user/service/CarIllegalService.class
+com/zmcsoft/rex/api/user/service/WechatUserService.class
+com/zmcsoft/rex/api/user/entity/UserCar$UserCarBuilder.class
+com/zmcsoft/rex/api/user/entity/CarIllegal.class
+com/zmcsoft/rex/api/user/entity/User$Status.class
+com/zmcsoft/rex/api/user/entity/UserDriverLicense$UserDriverLicenseBuilder.class
+com/zmcsoft/rex/api/user/entity/User$Type.class
+com/zmcsoft/rex/api/user/entity/UserCar.class
+com/zmcsoft/rex/api/user/service/UserDriverLicenseService.class
+com/zmcsoft/rex/api/user/service/UserServiceManager.class
+com/zmcsoft/rex/api/user/entity/CarIllegal$CarIllegalBuilder.class
+com/zmcsoft/rex/api/user/entity/User$UserBuilder.class

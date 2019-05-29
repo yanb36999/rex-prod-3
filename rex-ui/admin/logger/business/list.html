@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <title>用户管理</title>
+    <!--加载后执行list.js-->
+    <script data-main="list.js" src="../../boot.js" type="text/javascript"></script>
+    <style>
+        .ERROR{
+            color: red;
+        }
+        .TRACE{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="mini-toolbar" style="border-bottom:0;padding:0px;">
+    <table id="search-box">
+        <tr>
+            <td>应<span style="margin-left: 2em"></span>用:
+                <input name="app" style="width: 200px" class="mini-textbox"/></td>
+            <td>日志名称:<input name="name" class="mini-textbox" style="width: 152px"/></td>
+            <td>日志级别:<input name="level" class="mini-combobox" valueField="text" showNullItem="true"
+                            style="width: 80px"
+                            data='[{"text":"TRACE"},{"text":"INFO"},{"text":"DEBUG"},{"text":"WARN"},{"text":"ERROR"}]' /></td>
+            <td>日志内容:<input name="message$like" class="mini-textbox"/></td>
+        </tr>
+        <tr>
+            <td colspan="3">日志时间:
+                <input name="createTime$GT" style="width: 200px" class="mini-datepicker" format="yyyy-MM-dd HH:mm:ss"/>
+                -
+                <input name="createTime$LT"  style="width: 200px" class="mini-datepicker" format="yyyy-MM-dd HH:mm:ss" /></td>
+            <td>
+                <a class="mini-button search-button" plain="true" iconCls="icon-search">搜索</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="mini-fit">
+    <div id="datagrid" class="mini-datagrid" style="width:100%;height:100%;margin: auto;" showPager="true" pageSize="20" sortOrder="desc" sortField="createTime">
+        <div property="columns">
+            <div field="app" width="120" headerAlign="center"  align="center">应用</div>
+            <div name="name" field="name"  width="50" headerAlign="center" align="center">日志名称</div>
+            <div name="level" field="level"  width="50" headerAlign="center" allowSort="true"  align="center">日志级别</div>
+            <div field="className" width="100" headerAlign="center" allowSort="true" align="center">类名</div>
+            <!--<div field="methodName" width="50" headerAlign="center" align="center">方法</div>-->
+            <div field="lineNumber" width="30" headerAlign="center" align="center">行号</div>
+            <div name="message" field="message" autoEscape="true" width="200"  headerAlign="center" align="left">日志内容</div>
+            <div name="createTime" width="100" field="createTime" allowSort="true"  headerAlign="center" align="center">日志时间</div>
+            <div name="action" renderer="renderAction" headerAlign="center" align="center">操作</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

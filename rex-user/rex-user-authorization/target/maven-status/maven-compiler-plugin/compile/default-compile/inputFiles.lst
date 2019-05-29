@@ -1,0 +1,9 @@
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/CustomRexUserTokenParser.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/RexUserAuthenticationAutoConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/RexUserAuthenticationInitializeService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/builder/PermissionBuilder.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/RexUserTokenParser.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/utils/DESUtils.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/DESRexUserTokenParser.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/RexUserAuthenticationManager.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-authorization/src/main/java/com/zmcsoft/rex/api/user/authorization/builder/RexUserAuthenticationBuilder.java

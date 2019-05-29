@@ -1,0 +1,11 @@
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/entity/User.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/service/WechatUserService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/service/UserDriverLicenseService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/entity/CarIllegal.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/service/UserCarService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/service/UserService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/service/UserServiceManager.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/entity/UserDriverLicense.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/service/UserPointService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/entity/UserCar.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-user/rex-user-api/src/main/java/com/zmcsoft/rex/api/user/service/CarIllegalService.java

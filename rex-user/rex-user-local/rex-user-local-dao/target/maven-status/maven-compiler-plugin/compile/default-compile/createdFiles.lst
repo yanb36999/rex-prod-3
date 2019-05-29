@@ -1,0 +1,4 @@
+com/zmcsoft/rex/user/local/dao/RexUserDao.class
+com/zmcsoft/rex/user/local/dao/CarIllegalDao.class
+com/zmcsoft/rex/user/local/dao/UserDriverLicenseDao.class
+com/zmcsoft/rex/user/local/dao/UserCarDao.class

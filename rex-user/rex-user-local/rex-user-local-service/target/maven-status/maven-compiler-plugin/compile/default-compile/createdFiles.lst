@@ -1,0 +1,5 @@
+com/zmcsoft/rex/user/local/service/simple/SimpleUserCarService.class
+com/zmcsoft/rex/user/local/service/simple/SimpleUserService.class
+com/zmcsoft/rex/user/local/service/simple/SimpleUserDriverLicenseService.class
+com/zmcsoft/rex/user/local/service/simple/SimpleUserServiceManager.class
+com/zmcsoft/rex/user/local/service/simple/SimpleCarIllegalService.class

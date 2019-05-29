@@ -1,0 +1,7 @@
+wechat:
+  app-id: wxb492374e5ba6759f
+  secret: 539151c8ebcdd7a72bb5a115878c9f67
+  token: 9661a5ea26eb4cd3af234445fff1e866
+  aes-key: 94EBtz1kgvwra9DcAKIRepSvlwLikzq3iF97VviHANx
+server:
+  port: 8080

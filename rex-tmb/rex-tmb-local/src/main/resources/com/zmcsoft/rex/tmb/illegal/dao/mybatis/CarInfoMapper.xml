@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zmcsoft.rex.tmb.illegal.impl.dao.CarInfoDao">
+    <resultMap id="CarInfoResultMap" type="com.zmcsoft.rex.tmb.illegal.entity.CarInfo">
+        <id property="id" column="XH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="plateType" column="HPZL" javaType="String" jdbcType="VARCHAR"/>
+        <result property="plateNumber" column="HPHM" javaType="String" jdbcType="VARCHAR"/>
+        <result property="carModel" column="CLXH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="vin" column="CLSBDH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="engineNo" column="FDJH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="registerDate" column="CCDJRQ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="validDate" column="YXQZ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="scrapDate" column="QZBFQZ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="fileNumber" column="DABH" javaType="String" jdbcType="INTEGER"/>
+        <result property="status" column="ZT" javaType="String" jdbcType="VARCHAR"/>
+        <result property="pledgeSign" column="DYBJ" javaType="String" jdbcType="VARCHAR"/>
+        <result property="pledgeRelieveDate" column="DYJCRQ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="pledgeDate" column="DYRQ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="GXSJ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="certificate" column="FZJG" javaType="String" jdbcType="VARCHAR"/>
+        <result property="owner" column="SYR" javaType="String" jdbcType="VARCHAR"/>
+        <result property="idCard" column="SFZMHM" javaType="String" jdbcType="VARCHAR"/>
+        <result property="statistics" column="SFTJ" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="putStorageDate" column="RKSJ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="useNature" column="SYXZ" javaType="String" jdbcType="VARCHAR"/>
+        <result property="vehicleType" column="CLLX" javaType="String" jdbcType="VARCHAR"/>
+        <result property="seatingCapacity" column="HDZK" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="productionDate" column="CCRQ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="syncFileName" column="WJM" javaType="String" jdbcType="VARCHAR"/>
+        <result property="eldingType" column="RLZL" javaType="String" jdbcType="VARCHAR"/>
+        <result property="plateNumber2" column="HPHM2" javaType="String" jdbcType="VARCHAR"/>
+        <result property="phone" column="LXDH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="address" column="ZSXXDZ" javaType="String" jdbcType="VARCHAR"/>
+        <result property="mobilePhone" column="SJHM" javaType="String" jdbcType="VARCHAR"/>
+        <result property="addressDistrict" column="ZSXZQH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="ownership" column="SYQ" javaType="String" jdbcType="VARCHAR"/>
+        <result property="district" column="XZQH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="vehicleBrand" column="CLPP1" javaType="String" jdbcType="VARCHAR"/>
+        <result property="vehicleColor" column="CSYS" javaType="String" jdbcType="VARCHAR"/>
+        <result property="newEnergy" column="SFXNY" javaType="String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <!--用于动态生成sql所需的配置-->
+    <sql id="config">
+        <bind name="resultMapId" value="'CarInfoResultMap'"/>
+        <bind name="tableName" value="'sea_web_veh'"/>
+    </sql>
+
+    <!--<insert id="insert" parameterType="com.zmcsoft.rex.api.user.entity.UserCar">-->
+    <!--<include refid="config"/>-->
+    <!--<include refid="BasicMapper.buildInsertSql"/>-->
+    <!--</insert>-->
+
+    <!--<delete id="deleteByPk" parameterType="Long">-->
+    <!--delete from t_user_car where u_id =#{id}-->
+    <!--</delete>-->
+
+    <!--<delete id="delete" parameterType="org.hswebframework.web.commons.entity.Entity">-->
+    <!--<include refid="config"/>-->
+    <!--<include refid="BasicMapper.buildDeleteSql"/>-->
+    <!--</delete>-->
+
+    <!--<update id="update" parameterType="org.hswebframework.web.commons.entity.Entity">-->
+    <!--<include refid="config"/>-->
+    <!--<include refid="BasicMapper.buildUpdateSql"/>-->
+    <!--</update>-->
+
+    <select id="selectByMap" resultMap="CarInfoResultMap" parameterType="Map">
+        SELECT
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(SFZMHM,1,'cdjgj910seatrend') as SFZMHM,
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(HPHM,1,'cdjgj910seatrend') as HPHM,
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(SYR,1,'cdjgj910seatrend') as SYR,
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(CLSBDH,1,'cdjgj910seatrend') as CLSBDH,
+        sea_web_veh.*
+        FROM sea_web_veh
+        <where>
+            <if test="plateType != null">
+                AND HPZL = #{plateType}
+            </if>
+            <if test="plateNumber != null">
+                AND HPHM = PG_ENCRYPT_DECRYPT.ENCRYPT_3KEY_MODE(#{plateNumber},1,'cdjgj910seatrend')
+            </if>
+        </where>
+    </select>
+
+
+    <select id="query" parameterType="org.hswebframework.web.commons.entity.Entity" resultMap="CarInfoResultMap">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildSelectSql"/>
+    </select>
+
+    <select id="count" parameterType="org.hswebframework.web.commons.entity.Entity" resultType="int">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildTotalSql"/>
+    </select>
+    <select id="selectListByMap" resultMap="CarInfoResultMap" parameterType="Map">
+        SELECT sea_web_veh.*,
+        PG_ENCRYPT_DECRYPT.DECRYPT_3KEY_MODE(HPHM,1,'cdjgj910seatrend') as HPHM
+        FROM sea_web_veh
+        <where>
+            <if test="plateType != null">
+                AND HPZL = #{plateType}
+            </if>
+            <if test="plateNumber != null">
+                AND HPHM = PG_ENCRYPT_DECRYPT.ENCRYPT_3KEY_MODE(#{plateNumber},1,'cdjgj910seatrend')
+            </if>
+        </where>
+    </select>
+</mapper>

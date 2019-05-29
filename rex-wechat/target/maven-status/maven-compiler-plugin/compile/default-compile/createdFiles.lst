@@ -1,0 +1,8 @@
+META-INF/spring-configuration-metadata.json
+com/zmcsoft/rex/wechat/WebChatAutoConfiguration.class
+com/zmcsoft/rex/wechat/WeChatProperties.class
+com/zmcsoft/rex/wechat/WebChatCallBackController.class
+com/zmcsoft/rex/wechat/WebChatJSApiController.class
+com/zmcsoft/rex/wechat/AutoRegisterWxMpMessageHandler.class
+com/zmcsoft/rex/wechat/WxSendTemplateMsgService.class
+com/zmcsoft/rex/wechat/WxSendTemplateMsgServiceImpl.class
