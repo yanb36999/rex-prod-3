@@ -1,0 +1,51 @@
+server:
+  port: 8898
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,application/json,text/plain,text/css,text/javascript,application/javascript
+spring:
+    aop:
+        auto: true
+        proxy-target-class: true
+    profiles:
+      active: dev
+    datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name : org.h2.Driver
+      filters: stat
+      max-active: 1000
+      initial-size: 5
+      min-idle: 5
+      max-wait: 50000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      validation-query: select 1
+      time-between-eviction-runs-millis: 60000
+      max-open-prepared-statements: 2000
+    cache:
+      type: simple
+    resources:
+      static-locations: file:./target/output/,file:./rex-ui/,file:./static/,/,classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/, classpath:/public/
+    http:
+      multipart:
+        enabled: true
+        max-file-size: 1024MB
+        max-request-size: 1200MB
+hsweb:
+    app:
+      name: 蓉E行交通众治平台-视频服务
+      version: 1.0.0
+      upload:
+          static-file-path: ./static/upload
+          static-location: http://localhost:${server.port}/upload/
+          file-path: ./upload/file
+mybatis:
+  mapper-locations: classpath*:com/zmcsoft/**/*Mapper.xml
+  dynamic-datasource: true
+fastjson:
+  features: WriteDateUseDateFormat,DisableCircularReferenceDetect,WriteNullStringAsEmpty,WriteNullNumberAsZero
+logging:
+  config: classpath:config/logback-${spring.profiles.active}.xml

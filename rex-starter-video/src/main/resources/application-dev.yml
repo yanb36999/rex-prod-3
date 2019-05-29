@@ -1,0 +1,37 @@
+logging:
+    level:
+      org.hswebframework.expands: error
+      com.zmcsoft: debug
+      org.ibatis: debug
+      org.mybatis: debug
+      org.mybatis.spring: debug
+      io.undertow: warn
+      org.springframework: warn
+      org.quartz.core: warn
+      io.swagger: warn
+      springfox: warn
+      com.alibaba.druid: warn
+      org.apache.cxf: warn
+      org.apache.http: warn
+spring:
+    datasource:
+      url: jdbc:h2:file:./data/video-server
+      username: sa
+      password:
+hsweb:
+    web:
+      upload:
+          static-location: http://localhost:${server.port}/upload/
+    cors:
+        enable: true
+        allowed-origins: "*"
+        allowed-methods: "*"
+        allowed-headers: "*"
+
+com:
+  zmcsoft:
+    video:
+      input-dir: @project.basedir@
+      output-dir: @project.basedir@/target/output/
+      base-url: http://localhost:8898/
+      file-source-url: http://jtzzlm.cdjg.gov.cn

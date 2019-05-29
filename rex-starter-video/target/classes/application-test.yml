@@ -1,0 +1,36 @@
+logging:
+    level: warn
+spring:
+    datasource:
+      url: jdbc:h2:file:./data/video-server
+      username: sa
+      password:
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+        settings:
+          web-allow-others: true
+hsweb:
+    web:
+      upload:
+          static-location:  http://file.rex.cdjg.gov.cn:8090/upload/
+          file-path: /data/upload
+          static-file-path: /opt/file-output/upload
+    cors:
+      enable: true
+      allowed-origins: "*"
+      allowed-methods: "*"
+      allowed-headers: "*"
+rex:
+  user-api:
+    secret-key: ee6e3e22cd152c4cc099ed263e6154f8a805c68b4fdf276518973d74106f25ec
+
+
+com:
+  zmcsoft:
+    video:
+      input-dir: /opt/file-input/
+      output-dir: /opt/file-output/
+      base-url: http://file.rex.hsweb.me:8088/
+      file-source-url: http://178.25.1.36

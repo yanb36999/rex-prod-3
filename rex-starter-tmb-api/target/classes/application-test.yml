@@ -1,0 +1,46 @@
+logging:
+    level: warn
+
+#spring:
+#    datasource:
+#      url: jdbc:mysql://rm-uf69tmdc5ym311144o.mysql.rds.aliyuncs.com/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: superzoc
+#      password: Zc09110817
+#logger-db:
+#    datasource:
+#      url: jdbc:mysql://rm-uf69tmdc5ym311144o.mysql.rds.aliyuncs.com/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: superzoc
+#      password: Zc09110817
+spring:
+    datasource:
+      url: jdbc:mysql://178.25.1.40/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: rex
+      password: p@ssw0rd
+tmb:
+    datasource:
+      validation-query: select 1 from dual
+      driver-class-name : oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@178.16.13.71:1521:orcl
+      username: web_admin
+      password: cdjgj!@#
+logger-db:
+    datasource:
+      url: jdbc:mysql://178.25.1.40/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: rex
+      password: p@ssw0rd
+hsweb:
+    web:
+      upload:
+          static-location: /upload/
+com:
+  zmcsoft:
+    logger:
+        data-source-id: loggerDb
+    tmb:
+      ftp:
+        username: ftpadmin
+        password: 123456
+        host: 178.25.1.40
+        port: 21
+redission:
+    host: redis://178.25.1.41:6379

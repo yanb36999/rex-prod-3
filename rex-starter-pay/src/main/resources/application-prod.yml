@@ -1,0 +1,34 @@
+logging:
+    level: warn
+
+#spring:
+#    datasource:
+#      url: jdbc:mysql://rm-uf69tmdc5ym311144o.mysql.rds.aliyuncs.com/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: superzoc
+#      password: Zc09110817
+#logger-db:
+#    datasource:
+#      url: jdbc:mysql://rm-uf69tmdc5ym311144o.mysql.rds.aliyuncs.com/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: superzoc
+#      password: Zc09110817
+spring:
+    datasource:
+      url: jdbc:mysql://178.25.1.48/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: root
+      password: cdjgj.=mysql1
+logger-db:
+    datasource:
+      url: jdbc:mysql://178.25.1.48/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: root
+      password: cdjgj.=mysql1
+com:
+  zmcsoft:
+    logger:
+        data-source-id: loggerDb
+    pay:
+      icbc:
+        callback: http://cdjjjf.rex.cdjg.gov.cn:8090/pay/icbc/callback
+      unionpay:
+        callback: http://cdjjjf.rex.cdjg.gov.cn:8090/pay/unionpay/callback
+redission:
+    host: redis://178.25.1.41:6380

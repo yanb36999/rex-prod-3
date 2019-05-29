@@ -1,0 +1,63 @@
+logging:
+    level:
+      org.hswebframework.expands: error
+      com.zmcsoft: debug
+      org.ibatis: debug
+      org.mybatis: debug
+      org.mybatis.spring: debug
+      io.undertow: warn
+      org.springframework: warn
+      org.quartz.core: warn
+      io.swagger: warn
+      springfox: warn
+      com.alibaba.druid: warn
+      org.apache.cxf: warn
+spring:
+    datasource:
+      #本地数据库
+      url: jdbc:mysql://47.93.46.11/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: rex
+      password: p@ssw0rd
+tmb:
+    datasource:
+      url: jdbc:mysql://47.93.46.11/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: rex
+      password: p@ssw0rd
+logger-db:
+    datasource:
+      url: jdbc:mysql://47.93.46.11/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: rex
+      password: p@ssw0rd
+#spring:
+#    datasource:
+##      url: jdbc:oracle:thin:@106.15.137.215:1521:orcl
+#      #本地数据库
+#      url: jdbc:mysql://178.25.1.40/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: rex
+#      password: p@ssw0rd
+#tmb:
+#    datasource:
+#      validation-query: select 1 from dual
+#      driver-class-name : oracle.jdbc.driver.OracleDriver
+#      url: jdbc:oracle:thin:@178.16.13.71:1521:orcl
+#      username: web_admin
+#      password: cdjgj!@#
+#logger-db:
+#    datasource:
+#      url: jdbc:mysql://178.25.1.40/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: rex
+#      password: p@ssw0rd
+hsweb:
+    web:
+      upload:
+          static-location: /upload/
+com:
+  zmcsoft:
+    tmb:
+      ftp:
+        username: ftpuser
+        password: cdjgj@910
+        host: 178.16.13.72
+        port: 21
+redission:
+    host: redis://localhost:6379

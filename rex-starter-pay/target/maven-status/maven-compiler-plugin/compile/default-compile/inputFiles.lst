@@ -1,0 +1,5 @@
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-pay/src/main/java/com/zmcsoft/rex/pay/RexPayApplication.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-pay/src/main/java/com/zmcsoft/rex/pay/druid/DruidStatFilter.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-pay/src/main/java/com/zmcsoft/rex/pay/datasource/MultipleDataSourceAutoConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-pay/src/main/java/com/zmcsoft/rex/pay/druid/DruidStatViewServlet.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-pay/src/main/java/com/zmcsoft/rex/pay/AuthorizationConfiguration.java

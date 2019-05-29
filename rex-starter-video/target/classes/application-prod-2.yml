@@ -1,0 +1,34 @@
+
+logging:
+    level: warn
+spring:
+    datasource:
+      url: jdbc:h2:file:./data/video-server-2
+      username: sa
+      password:
+    h2:
+      console:
+        path: /h2-console
+        settings:
+          web-allow-others: true
+        enabled: true
+hsweb:
+    web:
+      upload:
+          static-location:  http://file.rex.cdjg.gov.cn:8090/upload/
+          file-path: /data/file
+          static-file-path: /opt/file-output/upload
+    cors:
+        enable: true
+        allowed-origins: "*"
+        allowed-methods: "*"
+        allowed-headers: "*"
+com:
+  zmcsoft:
+    video:
+      input-dir: /opt/file-input/
+      output-dir: /opt/file-output/
+      base-url: http://file.rex.cdjg.gov.cn:8090/
+      file-source-url: http://178.25.1.36
+server:
+  port: 8899

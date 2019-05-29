@@ -1,0 +1,7 @@
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-tmb-api/src/main/java/com/zmcsoft/rex/tmb/druid/DruidStatViewServlet.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-tmb-api/src/main/java/com/zmcsoft/rex/tmb/ServiceConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-tmb-api/src/main/java/com/zmcsoft/rex/tmb/AuthorizationConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-tmb-api/src/main/java/com/zmcsoft/rex/tmb/datasource/MultipleDataSourceAutoConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-tmb-api/src/main/java/com/zmcsoft/rex/tmb/druid/DruidStatFilter.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-tmb-api/src/main/java/com/zmcsoft/rex/tmb/RexApiServerApplication.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-tmb-api/src/main/java/com/zmcsoft/rex/tmb/swagger/ApiDocConfiguration.java
