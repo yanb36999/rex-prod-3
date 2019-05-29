@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmcsoft.rex.workflow.illegal.impl.dao.IllegalCodeDao">
+    <resultMap id="IllegalCodeResultMap" type="com.zmcsoft.rex.workflow.illegal.api.entity.IllegalCode">
+        <id property="id" column="WFXW" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalLargeType" column="DMZL" javaType="String" jdbcType="CHAR"/>
+        <result property="illegalSmallType" column="DMFL" javaType="String" jdbcType="CHAR"/>
+        <result property="contentAbbreviate" column="WFMS" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalContent" column="WFNR" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalRegulations" column="WFGD" javaType="String" jdbcType="VARCHAR"/>
+        <result property="punishBasis" column="FLTW" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalScore" column="WFJFS" javaType="Integer" jdbcType="NUMERIC"/>
+        <result property="minMoney" column="FKJE_MIN" javaType="BigDecimal" jdbcType="NUMERIC"/>
+        <result property="maxMoney" column="FKJE_MAX" javaType="BigDecimal" jdbcType="NUMERIC"/>
+        <result property="defaultMoney" column="FKJE_DUT" javaType="BigDecimal" jdbcType="NUMERIC"/>
+        <result property="minMonth" column="ZKYS_MIN" javaType="String" jdbcType="VARCHAR"/>
+        <result property="maxMonth" column="ZKYS_MAX" javaType="String" jdbcType="VARCHAR"/>
+        <result property="defaultMonth" column="ZKYS_DUT" javaType="String" jdbcType="VARCHAR"/>
+        <result property="minDay" column="JLSJ_MIN" javaType="String" jdbcType="VARCHAR"/>
+        <result property="maxDay" column="JLSJ_MAX" javaType="String" jdbcType="VARCHAR"/>
+        <result property="defaultDay" column="JLSJ_DUT" javaType="String" jdbcType="VARCHAR"/>
+        <result property="forceActionType" column="QZCSLX" javaType="String" jdbcType="VARCHAR"/>
+        <result property="warningSign" column="JGBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="fineSign" column="FKBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="detentionSing" column="ZKBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="revokeSign" column="DXBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="detentionSign" column="JLBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="cancelCarPermit" column="CXVBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="cancelDriverPermit" column="CXDBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="international" column="GB" javaType="String" jdbcType="CHAR"/>
+        <result property="validityStart" column="YXQS" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="validityEnd" column="YXQZ" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="manageDepratment" column="GLBM" javaType="String" jdbcType="VARCHAR"/>
+        <result property="transferSign" column="CSBJ" javaType="String" jdbcType="CHAR"/>
+        <result property="serial" column="XH" javaType="String" jdbcType="VARCHAR"/>
+        <result property="layoutTransferSign" column="BJCSBJ" javaType="String" jdbcType="CHAR"/>
+    </resultMap>
+
+
+    <!--用于动态生成sql所需的配置-->
+    <sql id="config">
+        <bind name="resultMapId" value="'IllegalCodeResultMap'"/>
+        <bind name="tableName" value="'wf_illegal_code'"/>
+    </sql>
+
+    <insert id="insert" parameterType="com.zmcsoft.rex.workflow.illegal.api.entity.IllegalCode">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildInsertSql"/>
+    </insert>
+
+    <delete id="deleteByPk" parameterType="Long">
+        delete from wf_illegal_code where wfxw =#{id}
+    </delete>
+
+    <delete id="delete" parameterType="org.hswebframework.web.commons.entity.Entity">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildDeleteSql"/>
+    </delete>
+
+    <update id="update" parameterType="org.hswebframework.web.commons.entity.Entity">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildUpdateSql"/>
+    </update>
+
+
+    <select id="query" parameterType="org.hswebframework.web.commons.entity.Entity" resultMap="IllegalCodeResultMap">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildSelectSql"/>
+    </select>
+
+    <select id="count" parameterType="org.hswebframework.web.commons.entity.Entity" resultType="int">
+        <include refid="config"/>
+        <include refid="BasicMapper.buildTotalSql"/>
+    </select>
+</mapper>

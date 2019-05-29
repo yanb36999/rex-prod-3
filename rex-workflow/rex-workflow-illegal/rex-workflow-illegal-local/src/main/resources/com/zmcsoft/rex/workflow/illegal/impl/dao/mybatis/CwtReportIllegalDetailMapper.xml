@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zmcsoft.rex.workflow.illegal.impl.dao.CwtReportIllegalDetailDao">
+
+    <resultMap id="ReportIllegalDetailResultMap" type="com.zmcsoft.rex.workflow.illegal.api.entity.ReportIllegalDetail">
+        <!--<id property="id" column="f_lsh" javaType="String" jdbcType="VARCHAR"/>-->
+
+        <!--<result property="illegalInfo.name" column="f_xm" javaType="String" jdbcType="VARCHAR"/>-->
+
+        <result property="reportInfo.name" column="f_xm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.reportId" column="f_lsh" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.reportDate" column="f_wfsj" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="reportInfo.idNumber" column="f_sfzhm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.phone" column="f_lxrdh" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.describe" column="f_smms" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.address" column="f_wfdz" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.longitude" column="f_wfjd" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.latitude" column="f_wfwd" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.videoUrl" column="f_spdz_ys" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.cwtStatus" column="f_zt" javaType="Integer" jdbcType="TINYINT"/>
+        <result property="reportInfo.cwtStatusType" column="f_zt_lx" javaType="String" jdbcType="VARCHAR"/>
+
+        <result property="illegalCar.videoPath" column="f_spdz_ys" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.reportId" column="f_lsh" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.signDept" column="car.f_dw_code" javaType="String" jdbcType="VARCHAR"/>
+
+
+        <result property="reportInfo.reportType" column="car.f_wflx" javaType="String" jdbcType="VARCHAR"/>
+
+        <result property="illegalCar.createTime" column="car.f_ctime" javaType="Date" jdbcType="TIMESTAMP"/>
+
+        <result property="illegalCar.plateType" column="car.f_hpzl" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.plateNo" column="car.f_hphm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.carType" column="car.f_cllx" javaType="String" jdbcType="VARCHAR"/>
+        <!--<result property="illegalCar.carStatus" column="f_spdz" javaType="String" jdbcType="VARCHAR"/>-->
+        <result property="illegalCar.carColor" column="car.f_csys" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.carBrand" column="car.f_clpp" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.fuelType" column="car.f_rlzl" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.cwtStatus" column="car.f_res" javaType="Integer" jdbcType="TINYINT"/>
+        <result property="illegalCar.cwtStatusType" column="car.f_res_lx" javaType="String" jdbcType="VARCHAR"/>
+        <!--<result property="illegalCar.imgPath" column="car.f_rlzl" javaType="String" jdbcType="VARCHAR"/>-->
+
+    </resultMap>
+
+    <resultMap id="RexReportIllegalDetailResultMap" type="com.zmcsoft.rex.workflow.illegal.api.entity.ReportIllegalDetail">
+        <result property="illegalCar.id" column="c_id" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.plateType" column="c_hpzl" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.plateNo" column="c_hphm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.carType" column="c_cllx" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.carStatus" column="c_jdczt" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.owner" column="c_syr" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.idNo" column="c_sfzhm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.fileNumber" column="c_dabh" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.contactPhone" column="c_lxdh" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.phoneNo" column="c_sjhm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.fuelType" column="c_rlzl" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.carColor" column="c_clys" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.carBrand" column="c_clpp" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.reportId" column="c_jblsh" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.videoPath" column="c_spdz" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.videoShotPath" column="c_jtdz" javaType="java.util.List" jdbcType="CLOB"/>
+        <result property="illegalCar.signDept" column="c_qsbm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.signDeptName" column="c_qsbmmc" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.signReviewer" column="c_qsfhr" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.signReviewerName" column="c_qsfhxm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.signReviewStatus" column="c_qsfhzt" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.punishResult" column="c_cfjg" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.stopCause" column="c_zzyy" javaType="String" jdbcType="VARCHAR"/>
+        <result property="illegalCar.illegalCount" column="c_wfbs" javaType="Integer" jdbcType="VARCHAR"/>
+        <result property="illegalCar.msgSendDate" column="c_dxgzdz" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="illegalCar.msgSendStatus" column="c_dxgzzt" javaType="Byte" jdbcType="TINYINT"/>
+        <result property="illegalCar.createTime" column="c_cjsj" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="illegalCar.updateTime" column="c_gxsj" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="illegalCar.confirmTime" column="c_qrsj" javaType="Date" jdbcType="TIMESTAMP"/>
+
+        <result property="reportInfo.id" column="report.f_id" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.reportId" column="report.f_lsh" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.name" column="report.f_xm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.reportDate" column="report.f_wfsj" javaType="Date" jdbcType="TIMESTAMP"/>
+        <result property="reportInfo.openId" column="report.f_openid" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.idNumber" column="report.f_sfzhm" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.phone" column="report.f_lxrdh" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.describe" column="report.f_smms" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.address" column="report.f_wfdz" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.reportType" column="report.f_wflx" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.longitude" column="report.f_jbjd" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.latitude" column="report.f_jbwd" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.videoUrl" column="report.f_spdz" javaType="String" jdbcType="VARCHAR"/>
+        <result property="reportInfo.radioUrl" column="report.f_ypdz" javaType="String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <update id="updateStatus">
+        UPDATE t_illegal_order_slsh_car SET f_res= 3, f_res_lx = '301' where f_lsh=#{reportId} and f_hpzl=#{plateType} and f_hphm=#{plateNumber}
+    </update>
+
+    <update id="updateCheckFailStatus">
+        UPDATE t_illegal_order_slsh_car SET f_res= 3, f_res_lx = '302' where f_lsh=#{reportId} and f_hpzl=#{plateType} and f_hphm=#{plateNumber}
+    </update>
+
+    <update id="acciptReport">
+        UPDATE t_illegal_user_order u set u.f_zt='1',u.f_zt_lx = '101' WHERE f_lsh=#{reportId}
+    </update>
+
+    <update id="acceptReportCar">
+        UPDATE t_illegal_order_slsh_car car set car.f_res = '5',car.f_res_lx = '0' WHERE car.f_lsh = #{reportId} and car.f_hphm=#{plateNo} and car.f_hpzl=#{plateType}
+    </update>
+
+
+    <!--用于动态生成sql所需的配置-->
+    <sql id="config">
+        <bind name="resultMapId" value="'ReportIllegalDetailResultMap'"/>
+        <bind name="tableName" value="'t_illegal_user_order'"/>
+    </sql>
+
+    <sql id="configRex">
+        <bind name="resultMapId" value="'RexReportIllegalDetailResultMap'"/>
+        <bind name="tableName" value="'jb_illegal_car'"/>
+    </sql>
+
+    <select id="query" parameterType="org.hswebframework.web.commons.entity.Entity" resultMap="ReportIllegalDetailResultMap">
+        <include refid="config"/>
+        select
+        <include refid="BasicMapper.buildSelectField"/>
+        from t_illegal_order_slsh_car car
+        inner join t_illegal_user_order t_illegal_user_order on car.f_lsh = t_illegal_user_order.f_lsh
+        <where>
+            <include refid="BasicMapper.buildWhere"/>
+        </where>
+        <include refid="BasicMapper.buildSortField"/>
+    </select>
+
+    <select id="count" parameterType="org.hswebframework.web.commons.entity.Entity" resultType="int">
+        <include refid="config"/>
+        select count(1) as total
+        from t_illegal_order_slsh_car car
+        inner join t_illegal_user_order t_illegal_user_order on car.f_lsh = t_illegal_user_order.f_lsh
+        <where>
+            <include refid="BasicMapper.buildWhere"/>
+        </where>
+        <include refid="BasicMapper.buildSortField"/>
+    </select>
+
+    <select id="queryFromRex" parameterType="org.hswebframework.web.commons.entity.Entity" resultMap="RexReportIllegalDetailResultMap">
+        <include refid="configRex"/>
+        select
+        <include refid="BasicMapper.buildSelectField"/>
+        from `jb_illegal_car`
+        inner join `jb_illegal_report` report on jb_illegal_car.`c_jblsh` = report.`f_lsh`
+        <where>
+            <include refid="BasicMapper.buildWhere"/>
+        </where>
+        <include refid="BasicMapper.buildSortField"/>
+    </select>
+
+    <select id="countFromRex" parameterType="org.hswebframework.web.commons.entity.Entity" resultType="int">
+        <include refid="configRex"/>
+        select count(1) as total
+        from `jb_illegal_car`
+        inner join `jb_illegal_report` report on jb_illegal_car.`c_jblsh` = report.`f_lsh`
+        <where>
+            <include refid="BasicMapper.buildWhere"/>
+        </where>
+        <include refid="BasicMapper.buildSortField"/>
+    </select>
+</mapper>

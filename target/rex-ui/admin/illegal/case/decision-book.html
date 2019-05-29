@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <title>决定书</title>
+    <!--加载后执行save.js-->
+    <script data-main="decision-book.js" src="../../boot.js" type="text/javascript"></script>
+</head>
+<style>
+
+    ul#bcty365_nav{padding-left:50px; margin-bottom:10px; border-bottom:2px solid #ccc; overflow:hidden; _zoom:1;}
+    ul#bcty365_nav li{float:left; display:inline; margin:10px;}
+    ul#bcty365_nav li a{display:block;color:#000000; font-size:16px;}
+    ul#bcty365_nav li a,#wimoban_p,#wimoban_p a{ font-family:"微软雅黑";}
+    ul#bcty365_nav li a:hover,#wimoban_p a:hover{color:red;}
+    .asLabel .mini-textbox-border,
+    .asLabel .mini-textbox-input,
+    .asLabel .mini-buttonedit-border,
+    .asLabel .mini-buttonedit-input,
+    .asLabel .mini-textboxlist-border
+    {
+        border:0;background:none;cursor:default;
+    }
+    .asLabel .mini-buttonedit-button,
+    .asLabel .mini-textboxlist-close
+    {
+        display:none;
+    }
+    .asLabel .mini-textboxlist-item
+    {
+        padding-right:8px;
+    }
+    .tdClassOne{
+        width:20%;padding: 0 0 2% 0
+    }
+    .tdClassTow{
+        width:40%;padding: 0 0 2% 0
+    }
+</style>
+<body style="overflow: scroll;">
+
+<div>
+    <div style="width: 400px; margin: auto;padding: 1% 2% 0 2%">
+        <div class="mini-panel mini-panel-primary" title="公安行政处罚决定书" width="auto">
+            <div style="border: 1px solid #CCCCCC;margin: 0 0 1% 0">
+                <table id="punishDecision" border="0" cellpadding="1" cellspacing="2" style="width:100%">
+                    <tr style="width:100%;height: 10px;"></tr>
+                    <tr style="width:100%;">
+                        <td  class="" align="right"><span class="fonts">决定书编号：</span>　</td>
+                        <td  class="">
+                            <input style="width: 100%"  name="illegalCase.fileNumber" class="mini-textbox asLabel"  />
+                        </td>
+                    </tr>
+                    <tr style="width:100%;">
+                        <td  class="" align="right"><span class="fonts">告知单位：</span>　</td>
+                        <td  class="">
+                            <input style="width: 100%"   name="illegalCase.nunciatorOne.orgName" class="mini-textbox asLabel"  />
+                        </td>
+                    </tr>
+                    <tr style="width:100%;">
+                        <td class="" align="right"><span class="fonts">告知人：</span>　</td>
+                        <td class="">
+                            <input style="width: 100%"   name="illegalCase.nunciatorOne.name" class="mini-textbox asLabel"  />
+                        </td>
+                    </tr>
+                    <tr style="width:100%;">
+                        <td  class="" align="right"><span class="fonts">被告知人：</span>　</td>
+                        <td  class="">
+                            <input style="width: 100%"  name="illegalCase.party" class="mini-textbox asLabel"  />
+                        </td>
+                    </tr>
+                    <tr style="width:100%;">
+                        <td  class="" align="right"><span class="fonts">驾驶证号：</span>　</td>
+                        <td  class="">
+                            <input style="width: 100%"   name="illegalCase.driverNumber" class="mini-textbox asLabel"  />
+                        </td>
+                    </tr>
+                    <tr style="width:100%;">
+                        <td class="" align="right"><span class="fonts">车牌号：</span>　</td>
+                        <td class="">
+                            <input style="width: 100%"   name="illegalCase.plateNumber" class="mini-textbox asLabel"  />
+                        </td>
+                    </tr>
+                    <tr style="width:100%;">
+                        <td  class="" align="right"><span class="fonts">车辆类型：</span>　</td>
+                        <td  class="">
+                            <input style="width: 100%"  name="illegalCase.plateType" class="mini-textbox asLabel"  />
+                        </td>
+                    </tr>
+                    <tr style="width:100%;">
+                        <td  class="" align="right"><span class="fonts">联系方式：</span>　</td>
+                        <td  class="">
+                            <input style="width: 100%"   name="phone" class="mini-textbox asLabel"  />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="border: 1px solid #CCCCCC;padding: 0 3% 2% 3%">
+                <h3>告知内容：</h3>
+                <span>　　根据《中国人民共和国行政处罚法》第三十一条规定，现将拟作出的行政处罚决定的事实、理由、依据告知如下：</span>
+                <br />
+              <!--  <span>　　当事人于</span>
+                <span class="illegalDate"></span>
+                <span>，在</span>-->
+                <span>　　当事人于在</span>
+                <span class="illegalAdderss"></span>
+                <span>实施</span>
+                <span class="illegalContent"></span>
+                <span>，你的行为违反了</span>
+                <span class="illegalRegulations"></span>
+                <span>根据</span>
+                <span class="punishBasis"></span>
+                <span>，拟作出行政处罚：罚款</span>
+                <span class="defaultMoney"></span>
+                <span>元</span>
+                <span>根据《机动车驾驶证申领和使用规定》计</span>
+                <span class="illegalScore"></span>
+                <span>分</span>
+            </div>
+           <!-- <div >
+                <button style="margin: 2% 0 0 40%"  class="confirm-button">确认</button>
+                <button class="cancel-button" style="">取消</button>
+            </div>-->
+        </div>
+    </div>
+</div>
+</body>
+</html>
