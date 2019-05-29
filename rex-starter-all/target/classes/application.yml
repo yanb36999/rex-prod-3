@@ -1,0 +1,90 @@
+wechat:
+  app-id: wxb492374e5ba6759f
+  secret: 539151c8ebcdd7a72bb5a115878c9f67
+  token: 9661a5ea26eb4cd3af234445fff1e866
+  aes-key: 94EBtz1kgvwra9DcAKIRepSvlwLikzq3iF97VviHANx
+server:
+  port: 8087
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,application/json,text/plain,text/css,text/javascript,application/javascript
+spring:
+    aop:
+        auto: true
+        proxy-target-class: true
+    profiles:
+      active: dev
+    datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name : com.mysql.jdbc.Driver
+      filters: stat
+      max-active: 1000
+      initial-size: 5
+      min-idle: 5
+      max-wait: 50000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      validation-query: select 1
+      time-between-eviction-runs-millis: 60000
+      max-open-prepared-statements: 2000
+    cache:
+      type: simple
+    resources:
+      static-locations: file:./rex-ui/,file:./static/,/,classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/, classpath:/public/
+    http:
+      multipart:
+        enabled: true
+        max-file-size: 100MB
+        max-request-size: 120MB
+hsweb:
+    app:
+      name: 蓉E行交通众治平台
+      version: 1.0.0
+      upload:
+          static-file-path: ./static/upload
+          static-location: /upload/
+          file-path: ./upload/file
+mybatis:
+  mapper-locations: classpath*:com/zmcsoft/**/*Mapper.xml
+  dynamic-datasource: true
+fastjson:
+  features: WriteDateUseDateFormat,DisableCircularReferenceDetect,WriteNullStringAsEmpty,WriteNullNumberAsZero,WriteNullListAsEmpty
+logging:
+  config: classpath:config/logback-${spring.profiles.active}.xml
+user-sys:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name : com.mysql.jdbc.Driver
+    filters: stat
+    max-active: 1000
+    initial-size: 5
+    min-idle: 5
+    max-wait: 50000
+    min-evictable-idle-time-millis: 300000
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    pool-prepared-statements: true
+    validation-query: select 1
+    time-between-eviction-runs-millis: 60000
+    max-open-prepared-statements: 2000
+logger-db:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name : com.mysql.jdbc.Driver
+    filters: stat
+    max-active: 1000
+    initial-size: 5
+    min-idle: 5
+    max-wait: 50000
+    min-evictable-idle-time-millis: 300000
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    pool-prepared-statements: true
+    validation-query: select 1
+    time-between-eviction-runs-millis: 60000
+    max-open-prepared-statements: 2000

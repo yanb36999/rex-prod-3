@@ -1,0 +1,538 @@
+{
+  "groups": [
+    {
+      "name": "com.zmcsoft.tmb.ftp",
+      "type": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure",
+      "sourceType": "com.zmcsoft.rex.starter.message.FTPConfiguration",
+      "sourceMethod": "defaultClientConfigure()"
+    },
+    {
+      "name": "logger-db.datasource",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+      "sourceType": "com.zmcsoft.rex.starter.datasource.MultipleDataSourceAutoConfiguration",
+      "sourceMethod": "logDbProperties()"
+    },
+    {
+      "name": "logger-db.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.zmcsoft.rex.starter.datasource.MultipleDataSourceAutoConfiguration",
+      "sourceMethod": "loggerDb()"
+    },
+    {
+      "name": "logger-db.datasource.xa",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+      "sourceMethod": "getXa()"
+    },
+    {
+      "name": "rex.user-api",
+      "type": "com.zmcsoft.rex.api.user.authorization.CustomRexUserTokenParser",
+      "sourceType": "com.zmcsoft.rex.starter.AuthorizationConfiguration",
+      "sourceMethod": "customRexUserTokenParser()"
+    },
+    {
+      "name": "spring.datasource",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+      "sourceType": "com.zmcsoft.rex.starter.datasource.MultipleDataSourceAutoConfiguration",
+      "sourceMethod": "defaultProperties()"
+    },
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.zmcsoft.rex.starter.datasource.MultipleDataSourceAutoConfiguration",
+      "sourceMethod": "dataSource()"
+    },
+    {
+      "name": "spring.datasource.xa",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+      "sourceMethod": "getXa()"
+    },
+    {
+      "name": "user-sys.datasource",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+      "sourceType": "com.zmcsoft.rex.starter.datasource.MultipleDataSourceAutoConfiguration",
+      "sourceMethod": "tmbProperties()"
+    },
+    {
+      "name": "user-sys.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.zmcsoft.rex.starter.datasource.MultipleDataSourceAutoConfiguration",
+      "sourceMethod": "userSysDataSource()"
+    },
+    {
+      "name": "user-sys.datasource.xa",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+      "sourceMethod": "getXa()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "com.zmcsoft.tmb.ftp.block-when-exhausted",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.client-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.encoding",
+      "type": "java.lang.String",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.eviction-policy-class-name",
+      "type": "java.lang.String",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.fairness",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.host",
+      "type": "java.lang.String",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.jmx-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.jmx-name-base",
+      "type": "java.lang.String",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.jmx-name-prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.lifo",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.max-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.max-total",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.max-wait-millis",
+      "type": "java.lang.Long",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.min-evictable-idle-time-millis",
+      "type": "java.lang.Long",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.min-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.num-tests-per-eviction-run",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.passive-mode",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.password",
+      "type": "java.lang.String",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.rename-uploaded",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.retry-times",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.soft-min-evictable-idle-time-millis",
+      "type": "java.lang.Long",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.test-on-borrow",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.test-on-create",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.test-on-return",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.test-while-idle",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.thread-num",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.time-between-eviction-runs-millis",
+      "type": "java.lang.Long",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.transfer-file-type",
+      "type": "java.lang.Integer",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "com.zmcsoft.tmb.ftp.username",
+      "type": "java.lang.String",
+      "sourceType": "com.zmcsoft.rex.message.ftp.pool.FTPClientConfigure"
+    },
+    {
+      "name": "logger-db.datasource.continue-on-error",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.data",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.data-password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.data-username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.generate-unique-name",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.initialize",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.jndi-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.platform",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.schema",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.schema-password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.schema-username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.separator",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.sql-script-encoding",
+      "type": "java.nio.charset.Charset",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.type",
+      "type": "java.lang.Class<? extends javax.sql.DataSource>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "logger-db.datasource.xa.data-source-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    },
+    {
+      "name": "logger-db.datasource.xa.properties",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    },
+    {
+      "name": "spring.datasource.continue-on-error",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.data",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.data-password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.data-username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.generate-unique-name",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.initialize",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.jndi-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.platform",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.schema",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.schema-password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.schema-username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.separator",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.sql-script-encoding",
+      "type": "java.nio.charset.Charset",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.type",
+      "type": "java.lang.Class<? extends javax.sql.DataSource>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.xa.data-source-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    },
+    {
+      "name": "spring.datasource.xa.properties",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    },
+    {
+      "name": "user-sys.datasource.continue-on-error",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.data",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.data-password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.data-username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.generate-unique-name",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.initialize",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.jndi-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.platform",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.schema",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.schema-password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.schema-username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.separator",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.sql-script-encoding",
+      "type": "java.nio.charset.Charset",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.type",
+      "type": "java.lang.Class<? extends javax.sql.DataSource>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "user-sys.datasource.xa.data-source-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    },
+    {
+      "name": "user-sys.datasource.xa.properties",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    }
+  ],
+  "hints": []
+}

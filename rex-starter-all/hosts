@@ -1,0 +1,23 @@
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+10.190.220.120  icbc-server
+
+178.25.1.39     file.rex.hsweb.me
+178.25.1.39     api.rex.hsweb.me
+178.25.1.39     cdjjjf.chegonggong.com
+
+178.25.1.36     cdjj.chegonggong.com
+
+178.25.1.40     api.test.rex.hsweb.me
+178.25.1.40     cdjjjt.chegonggong.com
+
+
+178.25.1.55     file.rex.cdjg.gov.cn
+178.25.1.55     api.rex.cdjg.gov.cn
+178.25.1.55     cdjjjf.rex.cdjg.gov.cn
+
+178.25.1.55     cdjjjt.rex.cdjg.gov.cn

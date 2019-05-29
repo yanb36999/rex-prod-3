@@ -1,0 +1,213 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.basic-info {
+    margin: auto;
+}
+
+.basic-info .label {
+    font-size: 16px;
+    /*text-align: right;*/
+}
+
+.title-button {
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.action-button {
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 16px;
+    margin-left: 1em;
+    width: 16px;
+    height: 16px;
+    background-position: 50% 50%;
+}
+
+.mini-grid-headerCell-inner {
+    font-weight: bold;
+}
+
+.label {
+    text-align: right;
+}
+.search-container{
+    margin: auto;
+}
+
+.button-custom {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #00b7ee;
+    padding: 10px 15px;
+    line-height:1.4;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size:14px;
+}
+.button-custom:hover {
+    background: #00a2d4;
+}
+
+.exam-img-list {
+    overflow: hidden;
+    padding: 10px 20px;
+}
+
+.exam-img-list div.img-item {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+    position: relative;
+}
+.exam-img-list img {
+    display: block;
+    width:100px;
+    height:100px;
+}
+.exam-img-list span {
+    display: block;
+    width:20px;
+    height:20px;
+    background: red;
+    position: absolute;
+    top:0;
+    right: 0;
+    color: #fff;
+    line-height:20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.knowledge-item {
+    width:100%;
+    padding:5px 36px 5px 16px;
+    margin:5px 0;
+    overflow: hidden;
+    border-bottom:1px dashed #ddd;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.knowledge-item div {
+    width:100%;
+}
+.knowledge-item span {
+    position: absolute;
+    right:20px;
+    bottom:5px;
+    color: red;
+    cursor: pointer;
+}
+
+.exam-item {
+    width:100%;
+    margin:5px 0;
+    overflow: hidden;
+    border:1px solid #ddd;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.exam-item .exam-title {
+    background: #f2f2f2;
+    line-height:30px;
+    padding:5px 40px 5px 10px;
+    border-bottom:1px solid #ddd;
+    position: relative;
+}
+.exam-item .exam-remove {
+    position: absolute;
+    z-index:1;
+    right:5px;
+    top:5px;
+    color: red;
+    cursor: pointer;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    text-align: center;
+}
+.exam-item .exam-options {
+    padding:10px;
+    overflow: hidden;
+    position: relative;
+}
+.exam-item .exam-options .exam-option {
+    padding:5px 0;
+}
+
+.days-item {
+    width:90%;
+    margin:10px auto;
+    overflow: hidden;
+    border:1px solid #ddd;
+    position: relative;
+}
+.days-item .days-title {
+    background: #f2f2f2;
+    line-height:30px;
+    padding:5px 40px 5px 10px;
+    border-bottom:1px solid #ddd;
+    position: relative;
+}
+.days-item .days-remove {
+    position: absolute;
+    z-index:1;
+    right:5px;
+    top:5px;
+    color: red;
+    cursor: pointer;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    text-align: center;
+}
+.days-item .days-body {
+    padding:10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.courseware-item {
+    padding:5px 10px;
+    margin:5px 20px;
+    overflow: hidden;
+    border-bottom:1px dashed #ddd;
+    position: relative;
+}
+.courseware-item div {
+    padding-right:100px;
+    float: left;
+}
+.courseware-item .delete-btn {
+    position: absolute;
+    right:20px;
+    bottom:5px;
+    color: red;
+    cursor: pointer;
+}
+
+.shadow-1 {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+}

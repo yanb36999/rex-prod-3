@@ -1,0 +1,10 @@
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/AuthorizationConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/message/FTPConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/druid/DruidStatFilter.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/druid/DruidStatViewServlet.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/message/SMSConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/RexAllApplication.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/swagger/ApiDocConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/logger/Slf4jBusinessLoggerListener.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/ServiceConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-all/src/main/java/com/zmcsoft/rex/starter/datasource/MultipleDataSourceAutoConfiguration.java
