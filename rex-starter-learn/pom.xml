@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>rex-platform</artifactId>
+        <groupId>com.zmcsoft.rex</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>rex-starter-learn</artifactId>
+
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <!--swagger-->
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger2</artifactId>
+                    <version>2.7.0</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger-ui</artifactId>
+                    <version>2.7.0</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-actuator</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.zmcsoft.rex.starter.LearnApplication</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-redission</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-wechat</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-concurrent-cache</artifactId>
+            <version>${hsweb.framework.version}</version>
+        </dependency>
+        <!--*******************hsweb****************-->
+
+        <!--权限管理-->
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-system-authorization-starter</artifactId>
+        </dependency>
+
+        <!--基础权限控制-->
+
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-authorization-basic</artifactId>
+        </dependency>
+        <!--访问日志-->
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-access-logging-aop</artifactId>
+        </dependency>
+
+        <!--动态表单-->
+        <!--<dependency>-->
+        <!--<groupId>org.hswebframework.web</groupId>-->
+        <!--<artifactId>hsweb-system-dynamic-form-starter</artifactId>-->
+        <!--<version>${hsweb.framework.version}</version>-->
+        <!--</dependency>-->
+
+        <!--文件上传，下载-->
+        <!--<dependency>-->
+        <!--<groupId>org.hswebframework.web</groupId>-->
+        <!--<artifactId>hsweb-system-file-starter</artifactId>-->
+        <!--<version>${hsweb.framework.version}</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-system-file-service-oauth2</artifactId>
+            <version>${hsweb.framework.version}</version>
+        </dependency>
+        <!--定时调度
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-system-schedule-starter</artifactId>
+            <version>${hsweb.framework.version}</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.hswebframework</groupId>
+            <artifactId>hsweb-expands-compress</artifactId>
+            <version>${hsweb.expands.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-system-organizational-starter</artifactId>
+            <version>${hsweb.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-system-organizational-authorization</artifactId>
+            <version>${hsweb.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-system-script-starter</artifactId>
+            <version>${hsweb.framework.version}</version>
+        </dependency>
+
+        <!--*******************hsweb end****************-->
+        <!--<dependency>-->
+        <!--<groupId>org.hswebframework.web</groupId>-->
+        <!--<artifactId>hsweb-datasource-jta</artifactId>-->
+        <!--<version>${hsweb.framework.version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-video-remote</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-tmb-oauth2</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--用户相关-->
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-user-authorization</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-user-local-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-system-oauth2-client-starter</artifactId>
+            <version>${hsweb.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-logging-local</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-learn-local</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-learn-web</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+
+        <!--通用功能-->
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-commons-local</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zmcsoft.rex</groupId>
+            <artifactId>rex-commons-web</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!--spring-boot-->
+        <dependency>
+            <groupId>org.hswebframework.web</groupId>
+            <artifactId>hsweb-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--使用undertow作为web容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+        </dependency>
+
+        <!--others-->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>com.h2database</groupId>-->
+        <!--<artifactId>h2</artifactId>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>com.oracle</groupId>-->
+        <!--<artifactId>ojdbc14</artifactId>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

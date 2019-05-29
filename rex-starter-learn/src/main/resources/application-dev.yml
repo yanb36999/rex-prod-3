@@ -1,0 +1,76 @@
+logging:
+    level:
+      org.hswebframework.expands: error
+      com.zmcsoft: debug
+      org.ibatis: debug
+      org.mybatis: debug
+      org.mybatis.spring: debug
+      io.undertow: warn
+      org.springframework: warn
+      org.quartz.core: warn
+      io.swagger: warn
+      springfox: warn
+      com.alibaba.druid: warn
+      org.apache.cxf: warn
+      org.apache.http: warn
+spring:
+    datasource:
+#      url: jdbc:oracle:thin:@106.15.137.215:1521:orcl
+      #本地数据库
+      url: jdbc:mysql://47.93.46.11/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: rex
+      password: p@ssw0rd
+user-sys:
+    datasource:
+      url: jdbc:mysql://47.93.46.11/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: rex
+      password: p@ssw0rd
+logger-db:
+    datasource:
+      url: jdbc:mysql://47.93.46.11/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+      username: rex
+      password: p@ssw0rd
+#spring:
+#    datasource:
+##      url: jdbc:oracle:thin:@106.15.137.215:1521:orcl
+#      #本地数据库
+#      url: jdbc:mysql://178.25.1.40/rex?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: rex
+#      password: p@ssw0rd
+#user-sys:
+#    datasource:
+#      url: jdbc:mysql://178.25.1.37/wx_cdjj?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: root
+#      password: 7788119
+#logger-db:
+#    datasource:
+#      url: jdbc:mysql://178.25.1.40/rex_log?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+#      username: rex
+#      password: p@ssw0rd
+hsweb:
+    web:
+      upload:
+          static-location: /upload/
+    cors:
+        enable: true
+        allowed-origins: "*"
+        allowed-methods: "*"
+        allowed-headers: "*"
+icbc:
+    pay:
+      oauth2:
+        id: icbc-server
+        #id: icbc-server-test
+com:
+  zmcsoft:
+    logger:
+      data-source-id: loggerDb
+    video:
+      server:
+        url: http://localhost:8898/
+rex:
+  user-api:
+    secret-key: ee6e3e22cd152c4cc099ed263e6154f8a805c68b4fdf276518973d74106f25ec
+
+redission:
+    host: redis://localhost:6379

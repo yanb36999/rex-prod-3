@@ -1,0 +1,6 @@
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-icbc/src/main/java/com/zmcsoft/rex/icbc/service/IcbcApiService.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-icbc/src/main/java/com/zmcsoft/rex/icbc/ICBCServerApplication.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-icbc/src/main/java/com/zmcsoft/rex/icbc/datasource/MultipleDataSourceAutoConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-icbc/src/main/java/com/zmcsoft/rex/icbc/ftp/FTPConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-icbc/src/main/java/com/zmcsoft/rex/icbc/AuthorizationConfiguration.java
+/data/jenkinshome/workspace/rex-platform-all-prod-55/rex-starter-icbc/src/main/java/com/zmcsoft/rex/icbc/controller/IcbcController.java

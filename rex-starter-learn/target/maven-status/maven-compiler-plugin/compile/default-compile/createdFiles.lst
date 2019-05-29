@@ -1,0 +1,12 @@
+com/zmcsoft/rex/starter/AuthorizationConfiguration$1.class
+META-INF/spring-configuration-metadata.json
+com/zmcsoft/rex/starter/ftp/FTPConfiguration$1.class
+com/zmcsoft/rex/starter/LearnApplication.class
+com/zmcsoft/rex/starter/ftp/FTPConfiguration$ProductionFTPClientConfiguration.class
+com/zmcsoft/rex/starter/ftp/FTPConfiguration$DevFTPClientConfiguration.class
+com/zmcsoft/rex/starter/datasource/MultipleDataSourceAutoConfiguration.class
+com/zmcsoft/rex/starter/swagger/ApiDocConfiguration.class
+com/zmcsoft/rex/starter/ftp/FTPConfiguration$CustomFTPClientConfiguration.class
+com/zmcsoft/rex/starter/ftp/FTPConfiguration$1$1.class
+com/zmcsoft/rex/starter/ftp/FTPConfiguration.class
+com/zmcsoft/rex/starter/AuthorizationConfiguration.class

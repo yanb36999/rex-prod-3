@@ -1,0 +1,12 @@
+META-INF/spring-configuration-metadata.json
+com/zmcsoft/rex/icbc/ICBCServerApplication.class
+com/zmcsoft/rex/icbc/service/IcbcApiService.class
+com/zmcsoft/rex/icbc/ftp/FTPConfiguration$1.class
+com/zmcsoft/rex/icbc/ftp/FTPConfiguration$1$1.class
+com/zmcsoft/rex/icbc/ftp/FTPConfiguration$CustomFTPClientConfiguration.class
+com/zmcsoft/rex/icbc/ftp/FTPConfiguration$DevFTPClientConfiguration.class
+com/zmcsoft/rex/icbc/ftp/FTPConfiguration.class
+com/zmcsoft/rex/icbc/AuthorizationConfiguration.class
+com/zmcsoft/rex/icbc/ftp/FTPConfiguration$ProductionFTPClientConfiguration.class
+com/zmcsoft/rex/icbc/controller/IcbcController.class
+com/zmcsoft/rex/icbc/datasource/MultipleDataSourceAutoConfiguration.class
